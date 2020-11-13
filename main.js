@@ -6,18 +6,6 @@ let mySwiper = new Swiper('.js-slider', {
     }
 })
 
-let upButton = document.querySelector('.button--up');
-
-if (upButton !== undefined) {
-  window.addEventListener('scroll', function () {
-    if (window.pageYOffset > 750) {
-      upButton.classList.add('button--up-visible');
-    } else {
-      upButton.classList.remove('button--up-visible');
-    }
-  });
-}
-
 let menuItems = document.querySelectorAll('.menu__item')
 
 if (menuItems !== undefined) {
@@ -28,4 +16,16 @@ if (menuItems !== undefined) {
       menuItems[i].classList.add('menu__item--active');
     })
   }
+}
+
+let upButton = document.querySelector('.button--up');
+
+if (upButton !== undefined) {
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 750) {
+      upButton.classList.add('button--up-visible');
+    } else {
+      upButton.classList.remove('button--up-visible');
+    }
+  });
 }
